@@ -11,7 +11,7 @@ jobs:
       env:
         CODECOMMIT_SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         CODECOMMIT_SSH_PRIVATE_KEY_ID: ${{ secrets.SSH_PRIVATE_KEY_ID }}
-        INPUT_TARGET_REPO_URL: ssh://git-codecommit.ap-southeast-2.amazonaws.com/v1/repos/sdlf-foundations
+        INPUT_TARGET_REPO_URL: ssh://git-codecommit.ap-southeast-2.amazonaws.com/v1/repos/cc-repo
       run: |
         git --version
         mkdir -p /home/runner/.ssh
