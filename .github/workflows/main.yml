@@ -11,3 +11,5 @@ jobs:
       with:
         target_repo_url:
           ssh://git-codecommit.ap-southeast-2.amazonaws.com/v1/repos/cc-repo
+        ssh_username:         
+          ${{ secrets.CODECOMMIT_SSH_PRIVATE_KEY_ID }}
