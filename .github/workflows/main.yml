@@ -13,10 +13,8 @@ jobs:
           HOST_KEY: ${{ secrets.HOST_KEY }}
           SSH_CONFIG: ${{ secrets.SSH_CONFIG }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        shell: bash
         run: |
-          mkdir .ssh && cd .ssh && echo "$SSH_PRIVATE_KEY" > id_rsa && chmod 600 id_rsa
+          mkdir .ssh && cd .ssh && echo "$SSH_PRIVATE_KEY" > aws-southeast-2 && chmod 600 aws-southeast-2
           echo "$SSH_CONFIG" > config && chmod 600 config
-          echo "$HOST_KEY" > known_hosts && chmod 600 known_hosts && cd ..
           git remote add codecommit "$CODECOMMIT_URL"
           git push codecommit --all
